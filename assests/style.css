@@ -377,7 +377,6 @@ body {
   height: auto;
   padding-bottom: 10rem;
   overflow: auto;
-  margin-top:20rem;
 }
 .slider-section::-webkit-scrollbar {
   display: none;
