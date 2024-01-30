@@ -98,8 +98,19 @@
   .navbar .navbar-content a span {
     width: 10rem;
   }
+  .navbar .navbar-content a .icon {
+    height: 100% !important;
+  }
+
+  .navbar .navbar-content a :is(span, .icon i) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .navbar .navbar-content a span:nth-of-type(2) {
     width: 20rem;
+    height: 100%;
     justify-content: start;
   }
 
