@@ -20,6 +20,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!--!=================== slider swiper link  ===================-->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <!--!=================== css style sheets  ===================-->
     <link rel="stylesheet" href="./assests/style.css" />
     <link rel="stylesheet" href="./assests/responsive.css" />
@@ -29,59 +35,56 @@
     <header class="header">
       <section class="section-fluid header-top-fluid">
         <!--?===== header top section =====-->
-        <section class="header-top w-100 h-100">
+        <section class="header-top w-100 h-100 p-relative">
           <div class="m-auto section h-100">
             <!--todo=== header top items ===-->
-            <div class="header-top-content h-100">
+            <div class="header-top-content h-100 p-relative">
               <!--todo=== item one ===-->
               <a class="d-flex active" href="#"
                 ><img
-                  height="100%"
-                  width="100%"
-                  height="100%"
                   src="./assests/images/topHeader-1.png"
                   alt="topHeaderImage1"
               /></a>
               <!--todo=== item two ===-->
               <a class="d-flex" href="#"
                 ><img
-                  height="100%"
-                  width="100%"
                   src="./assests/images/topHeader-2.png"
                   alt="topHeaderImage2"
               /></a>
               <!--todo=== item three ===-->
               <a class="d-flex" href="#"
                 ><img
-                  height="100%"
-                  width="100%"
                   src="./assests/images/topHeader-3.png"
                   alt="topHeaderImage3"
               /></a>
+              <!--todo=== toggle btn ===-->
+              <div class="toggle-btn d-none d-flex show-btn">
+                <i class="fa-solid fa-less-than"></i>
+              </div>
+
               <!--?===== other items =====-->
 
-              <div class="side-bar">
+              <div class="side-bar p-relative">
+                <!--todo=== toggle btn ===-->
+                <div class="toggle-btn d-none d-flex p-absolute hide-btn">
+                  <i class="fa-solid fa-greater-than"></i>
+                </div>
                 <!--todo=== item four ===-->
                 <a class="d-flex" href="#"
                   ><img
-                    height="100%"
-                    width="100%"
                     src="./assests/images/topHeader-4.png"
                     alt="topHeaderImage4"
                 /></a>
                 <!--todo=== item five ===-->
                 <a class="d-flex" href="#"
                   ><img
-                    height="100%"
-                    width="100%"
                     src="./assests/images/topHeader-5.jpg"
                     alt="topHeaderImage5"
                 /></a>
                 <!--todo=== item six ===-->
                 <a class="d-flex" href="#"
                   ><img
-                    height="100%"
-                    width="100%"
+                    z
                     src="./assests/images/topHeader-6.png"
                     alt="topHeaderImage6"
                 /></a>
@@ -89,8 +92,6 @@
 
                 <a class="d-none" class="d-flex" href="#"
                   ><img
-                    height="100%"
-                    width="100%"
                     src="./assests/images/topHeader-7.png"
                     alt="topHeaderImage7"
                 /></a>
@@ -100,13 +101,24 @@
         </section>
       </section>
       <!--?===== header nav section =====-->
-      <section class="section-fluid navbar-fluid">
+      <section class="section-fluid navbar-fluid p-relative">
+        <div class="responsive-item">
+          <!--todo=== menu button  -->
+          <div class="menu-btn">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <!--todo=== log in btn ===-->
+          <div class="nav-log-in responsive-item">
+            <img src="./assests/images/profileNavSignup.png" alt="" />
+            <span class="txt-cap">log in</span>
+          </div>
+        </div>
         <nav class="navbar w-100 h-100">
           <div class="section m-auto h-100">
             <!--todo=== header nav items ===-->
             <div class="navbar-content d-flex h-100">
               <!--todo=== item one ===-->
-              <a href="#" class="home txt-centerr txt-cap">
+              <a href="#" class="home txt-center txt-cap">
                 <span class="icon icon-home"
                   ><i class="fa-brands fa-discord"></i
                 ></span>
@@ -297,333 +309,327 @@
         </div>
       </section>
       <!--!=================== slider section starts ===================-->
-      <section class="section-fluid">
-        <div class="slider-section">
-          <div class="slider-container">
-            <div class="slider">
-              <!--todo=== slide one ===-->
-              <div class="slide">
-                <div class="slide-img">
-                  <img src="./assests/images/01.png" alt="slide one" />
+      <section
+        class="section-fluid p-relative slider-main-container slider-container"
+      >
+        <!--todo==== main slider ====-->
+
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <!--?=== slide one ===-->
+            <div class="swiper-slide">
+              <div class="slide-img">
+                <img src="./assests/images/01.png" alt="slide one" />
+              </div>
+              <div class="slide-content w-100">
+                <!--todo=== pokemon name & code  ===-->
+                <div class="slide-heading d-flex">
+                  <h3 class="txt-cap">glaceon</h3>
+                  <span class="code d-non">299</span>
                 </div>
-                <div class="slide-content w-100">
-                  <!--todo=== pokemon name & code  ===-->
-                  <div class="slide-heading d-flex">
-                    <h3 class="txt-cap">glaceon</h3>
-                    <span class="code d-non">299</span>
+                <!--todo=== pokemon type ===-->
+                <div class="pokemon-type">
+                  <span class="type-heading txt-cap m-right">type</span>
+                  <div class="type-values">
+                    <span class="txt-cap">ground</span>
+                    <span class="txt-cap">fighting</span>
                   </div>
-                  <!--todo=== pokemon type ===-->
-                  <div class="pokemon-type">
-                    <span class="type-heading txt-cap m-right">type</span>
-                    <div class="type-values">
-                      <span class="txt-cap">ground</span>
-                      <span class="txt-cap">fighting</span>
-                    </div>
-                  </div>
-                  <!--todo=== pokemon ability ===-->
-                  <div class="pokemon-ability">
-                    <span class="ability-heading txt-cap m-right"
-                      >abilities</span
-                    >
-                    <div class="abilities-value">
-                      <span class="txt-cap">protosynthesis</span>
-                    </div>
+                </div>
+                <!--todo=== pokemon ability ===-->
+                <div class="pokemon-ability">
+                  <span class="ability-heading txt-cap m-right">abilities</span>
+                  <div class="abilities-value">
+                    <span class="txt-cap">protosynthesis</span>
                   </div>
                 </div>
               </div>
-
-              <!--todo=== slide two ===-->
-              <div class="slide">
-                <div class="slide-img">
-                  <img src="./assests/images/02.png" alt="slide two" />
+            </div>
+            <!--?=== slide two ===-->
+            <div class="swiper-slide">
+              <div class="slide-img">
+                <img src="./assests/images/02.png" alt="slide two" />
+              </div>
+              <div class="slide-content w-100">
+                <!--todo=== pokemon name & code  ===-->
+                <div class="slide-heading d-flex">
+                  <h3 class="txt-cap">glaceon</h3>
+                  <span class="code d-non">299</span>
                 </div>
-                <div class="slide-content w-100">
-                  <!--todo=== pokemon name & code  ===-->
-                  <div class="slide-heading d-flex">
-                    <h3 class="txt-cap">glaceon</h3>
-                    <span class="code d-non">299</span>
+                <!--todo=== pokemon type ===-->
+                <div class="pokemon-type">
+                  <span class="type-heading txt-cap m-right">type</span>
+                  <div class="type-values">
+                    <span class="txt-cap">ground</span>
+                    <span class="txt-cap">fighting</span>
                   </div>
-                  <!--todo=== pokemon type ===-->
-                  <div class="pokemon-type">
-                    <span class="type-heading txt-cap m-right">type</span>
-                    <div class="type-values">
-                      <span class="txt-cap">ground</span>
-                      <span class="txt-cap">fighting</span>
-                    </div>
-                  </div>
-                  <!--todo=== pokemon ability ===-->
-                  <div class="pokemon-ability">
-                    <span class="ability-heading txt-cap m-right"
-                      >abilities</span
-                    >
-                    <div class="abilities-value">
-                      <span class="txt-cap">protosynthesis</span>
-                    </div>
+                </div>
+                <!--todo=== pokemon ability ===-->
+                <div class="pokemon-ability">
+                  <span class="ability-heading txt-cap m-right">abilities</span>
+                  <div class="abilities-value">
+                    <span class="txt-cap">protosynthesis</span>
                   </div>
                 </div>
               </div>
+            </div>
+            <!--?=== slide three ===-->
+            <div class="swiper-slide">
+              <div class="slide-img">
+                <img src="./assests/images/03.png" alt="slide three" />
+              </div>
 
-              <!--todo=== slide three ===-->
-              <div class="slide">
-                <div class="slide-img">
-                  <img src="./assests/images/03.png" alt="slide three" />
+              <div class="slide-content w-100">
+                <!--todo=== pokemon name & code  ===-->
+                <div class="slide-heading d-flex">
+                  <h3 class="txt-cap">glaceon</h3>
+                  <span class="code d-non">299</span>
                 </div>
-
-                <div class="slide-content w-100">
-                  <!--todo=== pokemon name & code  ===-->
-                  <div class="slide-heading d-flex">
-                    <h3 class="txt-cap">glaceon</h3>
-                    <span class="code d-non">299</span>
+                <!--todo=== pokemon type ===-->
+                <div class="pokemon-type">
+                  <span class="type-heading txt-cap m-right">type</span>
+                  <div class="type-values">
+                    <span class="txt-cap">ground</span>
+                    <span class="txt-cap">fighting</span>
                   </div>
-                  <!--todo=== pokemon type ===-->
-                  <div class="pokemon-type">
-                    <span class="type-heading txt-cap m-right">type</span>
-                    <div class="type-values">
-                      <span class="txt-cap">ground</span>
-                      <span class="txt-cap">fighting</span>
-                    </div>
-                  </div>
-                  <!--todo=== pokemon ability ===-->
-                  <div class="pokemon-ability">
-                    <span class="ability-heading txt-cap m-right"
-                      >abilities</span
-                    >
-                    <div class="abilities-value">
-                      <span class="txt-cap">protosynthesis</span>
-                    </div>
+                </div>
+                <!--todo=== pokemon ability ===-->
+                <div class="pokemon-ability">
+                  <span class="ability-heading txt-cap m-right">abilities</span>
+                  <div class="abilities-value">
+                    <span class="txt-cap">protosynthesis</span>
                   </div>
                 </div>
               </div>
+            </div>
+            <!--?=== slide four ===-->
+            <div class="swiper-slide">
+              <div class="slide-img">
+                <img src="./assests/images/04.png" alt="slide four" />
+              </div>
 
-              <!--todo=== slide four ===-->
-              <div class="slide">
-                <div class="slide-img">
-                  <img src="./assests/images/04.png" alt="slide four" />
+              <div class="slide-content w-100">
+                <!--todo=== pokemon name & code  ===-->
+                <div class="slide-heading d-flex">
+                  <h3 class="txt-cap">glaceon</h3>
+                  <span class="code d-non">299</span>
                 </div>
-
-                <div class="slide-content w-100">
-                  <!--todo=== pokemon name & code  ===-->
-                  <div class="slide-heading d-flex">
-                    <h3 class="txt-cap">glaceon</h3>
-                    <span class="code d-non">299</span>
+                <!--todo=== pokemon type ===-->
+                <div class="pokemon-type">
+                  <span class="type-heading txt-cap m-right">type</span>
+                  <div class="type-values">
+                    <span class="txt-cap">ground</span>
+                    <span class="txt-cap">fighting</span>
                   </div>
-                  <!--todo=== pokemon type ===-->
-                  <div class="pokemon-type">
-                    <span class="type-heading txt-cap m-right">type</span>
-                    <div class="type-values">
-                      <span class="txt-cap">ground</span>
-                      <span class="txt-cap">fighting</span>
-                    </div>
-                  </div>
-                  <!--todo=== pokemon ability ===-->
-                  <div class="pokemon-ability">
-                    <span class="ability-heading txt-cap m-right"
-                      >abilities</span
-                    >
-                    <div class="abilities-value">
-                      <span class="txt-cap">protosynthesis</span>
-                    </div>
+                </div>
+                <!--todo=== pokemon ability ===-->
+                <div class="pokemon-ability">
+                  <span class="ability-heading txt-cap m-right">abilities</span>
+                  <div class="abilities-value">
+                    <span class="txt-cap">protosynthesis</span>
                   </div>
                 </div>
               </div>
+            </div>
+            <!--?=== slide five ===-->
+            <div class="swiper-slide">
+              <div class="slide-img">
+                <img src="./assests/images/05.png" alt="slide four" />
+              </div>
 
-              <!--todo=== slide five ===-->
-              <div class="slide">
-                <div class="slide-img">
-                  <img src="./assests/images/05.png" alt="slide five" />
+              <div class="slide-content w-100">
+                <!--todo=== pokemon name & code  ===-->
+                <div class="slide-heading d-flex">
+                  <h3 class="txt-cap">glaceon</h3>
+                  <span class="code d-non">299</span>
                 </div>
-
-                <div class="slide-content w-100">
-                  <!--todo=== pokemon name & code  ===-->
-                  <div class="slide-heading d-flex">
-                    <h3 class="txt-cap">glaceon</h3>
-                    <span class="code d-non">299</span>
+                <!--todo=== pokemon type ===-->
+                <div class="pokemon-type">
+                  <span class="type-heading txt-cap m-right">type</span>
+                  <div class="type-values">
+                    <span class="txt-cap">ground</span>
+                    <span class="txt-cap">fighting</span>
                   </div>
-                  <!--todo=== pokemon type ===-->
-                  <div class="pokemon-type">
-                    <span class="type-heading txt-cap m-right">type</span>
-                    <div class="type-values">
-                      <span class="txt-cap">ground</span>
-                      <span class="txt-cap">fighting</span>
-                    </div>
-                  </div>
-                  <!--todo=== pokemon ability ===-->
-                  <div class="pokemon-ability">
-                    <span class="ability-heading txt-cap m-right"
-                      >abilities</span
-                    >
-                    <div class="abilities-value">
-                      <span class="txt-cap">protosynthesis</span>
-                    </div>
+                </div>
+                <!--todo=== pokemon ability ===-->
+                <div class="pokemon-ability">
+                  <span class="ability-heading txt-cap m-right">abilities</span>
+                  <div class="abilities-value">
+                    <span class="txt-cap">protosynthesis</span>
                   </div>
                 </div>
               </div>
+            </div>
+            <!--?=== slide six ===-->
+            <div class="swiper-slide">
+              <div class="slide-img">
+                <img src="./assests/images/06.png" alt="slide four" />
+              </div>
 
-              <!--todo=== slide six ===-->
-              <div class="slide">
-                <div class="slide-img">
-                  <img src="./assests/images/06.png" alt="slide six" />
+              <div class="slide-content w-100">
+                <!--todo=== pokemon name & code  ===-->
+                <div class="slide-heading d-flex">
+                  <h3 class="txt-cap">glaceon</h3>
+                  <span class="code d-non">299</span>
                 </div>
-
-                <div class="slide-content w-100">
-                  <!--todo=== pokemon name & code  ===-->
-                  <div class="slide-heading d-flex">
-                    <h3 class="txt-cap">glaceon</h3>
-                    <span class="code d-non">299</span>
+                <!--todo=== pokemon type ===-->
+                <div class="pokemon-type">
+                  <span class="type-heading txt-cap m-right">type</span>
+                  <div class="type-values">
+                    <span class="txt-cap">ground</span>
+                    <span class="txt-cap">fighting</span>
                   </div>
-                  <!--todo=== pokemon type ===-->
-                  <div class="pokemon-type">
-                    <span class="type-heading txt-cap m-right">type</span>
-                    <div class="type-values">
-                      <span class="txt-cap">ground</span>
-                      <span class="txt-cap">fighting</span>
-                    </div>
-                  </div>
-                  <!--todo=== pokemon ability ===-->
-                  <div class="pokemon-ability">
-                    <span class="ability-heading txt-cap m-right"
-                      >abilities</span
-                    >
-                    <div class="abilities-value">
-                      <span class="txt-cap">protosynthesis</span>
-                    </div>
+                </div>
+                <!--todo=== pokemon ability ===-->
+                <div class="pokemon-ability">
+                  <span class="ability-heading txt-cap m-right">abilities</span>
+                  <div class="abilities-value">
+                    <span class="txt-cap">protosynthesis</span>
                   </div>
                 </div>
               </div>
+            </div>
+            <!--?=== slide seven ===-->
+            <div class="swiper-slide">
+              <div class="slide-img">
+                <img src="./assests/images/07.png" alt="slide four" />
+              </div>
 
-              <!--todo=== slide seven ===-->
-              <div class="slide">
-                <div class="slide-img">
-                  <img src="./assests/images/07.png" alt="slide seven" />
+              <div class="slide-content w-100">
+                <!--todo=== pokemon name & code  ===-->
+                <div class="slide-heading d-flex">
+                  <h3 class="txt-cap">glaceon</h3>
+                  <span class="code d-non">299</span>
                 </div>
-
-                <div class="slide-content w-100">
-                  <!--todo=== pokemon name & code  ===-->
-                  <div class="slide-heading d-flex">
-                    <h3 class="txt-cap">glaceon</h3>
-                    <span class="code d-non">299</span>
+                <!--todo=== pokemon type ===-->
+                <div class="pokemon-type">
+                  <span class="type-heading txt-cap m-right">type</span>
+                  <div class="type-values">
+                    <span class="txt-cap">ground</span>
+                    <span class="txt-cap">fighting</span>
                   </div>
-                  <!--todo=== pokemon type ===-->
-                  <div class="pokemon-type">
-                    <span class="type-heading txt-cap m-right">type</span>
-                    <div class="type-values">
-                      <span class="txt-cap">ground</span>
-                      <span class="txt-cap">fighting</span>
-                    </div>
-                  </div>
-                  <!--todo=== pokemon ability ===-->
-                  <div class="pokemon-ability">
-                    <span class="ability-heading txt-cap m-right"
-                      >abilities</span
-                    >
-                    <div class="abilities-value">
-                      <span class="txt-cap">protosynthesis</span>
-                    </div>
+                </div>
+                <!--todo=== pokemon ability ===-->
+                <div class="pokemon-ability">
+                  <span class="ability-heading txt-cap m-right">abilities</span>
+                  <div class="abilities-value">
+                    <span class="txt-cap">protosynthesis</span>
                   </div>
                 </div>
               </div>
+            </div>
+            <!--?=== slide eight ===-->
+            <div class="swiper-slide">
+              <div class="slide-img">
+                <img src="./assests/images/08.png" alt="slide four" />
+              </div>
 
-              <!--todo=== slide eight ===-->
-              <div class="slide">
-                <div class="slide-img">
-                  <img src="./assests/images/08.png" alt="slide eight" />
+              <div class="slide-content w-100">
+                <!--todo=== pokemon name & code  ===-->
+                <div class="slide-heading d-flex">
+                  <h3 class="txt-cap">glaceon</h3>
+                  <span class="code d-non">299</span>
                 </div>
-
-                <div class="slide-content w-100">
-                  <!--todo=== pokemon name & code  ===-->
-                  <div class="slide-heading d-flex">
-                    <h3 class="txt-cap">glaceon</h3>
-                    <span class="code d-non">299</span>
+                <!--todo=== pokemon type ===-->
+                <div class="pokemon-type">
+                  <span class="type-heading txt-cap m-right">type</span>
+                  <div class="type-values">
+                    <span class="txt-cap">ground</span>
+                    <span class="txt-cap">fighting</span>
                   </div>
-                  <!--todo=== pokemon type ===-->
-                  <div class="pokemon-type">
-                    <span class="type-heading txt-cap m-right">type</span>
-                    <div class="type-values">
-                      <span class="txt-cap">ground</span>
-                      <span class="txt-cap">fighting</span>
-                    </div>
-                  </div>
-                  <!--todo=== pokemon ability ===-->
-                  <div class="pokemon-ability">
-                    <span class="ability-heading txt-cap m-right"
-                      >abilities</span
-                    >
-                    <div class="abilities-value">
-                      <span class="txt-cap">protosynthesis</span>
-                    </div>
+                </div>
+                <!--todo=== pokemon ability ===-->
+                <div class="pokemon-ability">
+                  <span class="ability-heading txt-cap m-right">abilities</span>
+                  <div class="abilities-value">
+                    <span class="txt-cap">protosynthesis</span>
                   </div>
                 </div>
               </div>
+            </div>
+            <!--?=== slide nine ===-->
+            <div class="swiper-slide">
+              <div class="slide-img">
+                <img src="./assests/images/09.png" alt="slide four" />
+              </div>
 
-              <!--todo=== slide nine ===-->
-              <div class="slide">
-                <div class="slide-img">
-                  <img src="./assests/images/09.png" alt="slide nine" />
+              <div class="slide-content w-100">
+                <!--todo=== pokemon name & code  ===-->
+                <div class="slide-heading d-flex">
+                  <h3 class="txt-cap">glaceon</h3>
+                  <span class="code d-non">299</span>
                 </div>
-
-                <div class="slide-content w-100">
-                  <!--todo=== pokemon name & code  ===-->
-                  <div class="slide-heading d-flex">
-                    <h3 class="txt-cap">glaceon</h3>
-                    <span class="code d-non">299</span>
+                <!--todo=== pokemon type ===-->
+                <div class="pokemon-type">
+                  <span class="type-heading txt-cap m-right">type</span>
+                  <div class="type-values">
+                    <span class="txt-cap">ground</span>
+                    <span class="txt-cap">fighting</span>
                   </div>
-                  <!--todo=== pokemon type ===-->
-                  <div class="pokemon-type">
-                    <span class="type-heading txt-cap m-right">type</span>
-                    <div class="type-values">
-                      <span class="txt-cap">ground</span>
-                      <span class="txt-cap">fighting</span>
-                    </div>
-                  </div>
-                  <!--todo=== pokemon ability ===-->
-                  <div class="pokemon-ability">
-                    <span class="ability-heading txt-cap m-right"
-                      >abilities</span
-                    >
-                    <div class="abilities-value">
-                      <span class="txt-cap">protosynthesis</span>
-                    </div>
+                </div>
+                <!--todo=== pokemon ability ===-->
+                <div class="pokemon-ability">
+                  <span class="ability-heading txt-cap m-right">abilities</span>
+                  <div class="abilities-value">
+                    <span class="txt-cap">protosynthesis</span>
                   </div>
                 </div>
               </div>
+            </div>
+            <!--?=== slide ten ===-->
+            <div class="swiper-slide">
+              <div class="slide-img">
+                <img src="./assests/images/10.png" alt="slide four" />
+              </div>
 
-              <!--todo=== slide ten ===-->
-              <div class="slide">
-                <div class="slide-img">
-                  <img src="./assests/images/10.png" alt="slide ten" />
+              <div class="slide-content w-100">
+                <!--todo=== pokemon name & code  ===-->
+                <div class="slide-heading d-flex">
+                  <h3 class="txt-cap">glaceon</h3>
+                  <span class="code d-non">299</span>
                 </div>
-
-                <div class="slide-content w-100">
-                  <!--todo=== pokemon name & code  ===-->
-                  <div class="slide-heading d-flex">
-                    <h3 class="txt-cap">glaceon</h3>
-                    <span class="code d-non">299</span>
+                <!--todo=== pokemon type ===-->
+                <div class="pokemon-type">
+                  <span class="type-heading txt-cap m-right">type</span>
+                  <div class="type-values">
+                    <span class="txt-cap">ground</span>
+                    <span class="txt-cap">fighting</span>
                   </div>
-                  <!--todo=== pokemon type ===-->
-                  <div class="pokemon-type">
-                    <span class="type-heading txt-cap m-right">type</span>
-                    <div class="type-values">
-                      <span class="txt-cap">ground</span>
-                      <span class="txt-cap">fighting</span>
-                    </div>
-                  </div>
-                  <!--todo=== pokemon ability ===-->
-                  <div class="pokemon-ability">
-                    <span class="ability-heading txt-cap m-right"
-                      >abilities</span
-                    >
-                    <div class="abilities-value">
-                      <span class="txt-cap">protosynthesis</span>
-                    </div>
+                </div>
+                <!--todo=== pokemon ability ===-->
+                <div class="pokemon-ability">
+                  <span class="ability-heading txt-cap m-right">abilities</span>
+                  <div class="abilities-value">
+                    <span class="txt-cap">protosynthesis</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <!-- <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div> -->
+        </div>
+        <!--todo==== caption ====-->
+        <div class="caption p-absolute">
+          <i class="fa-brands fa-discord"></i> Feturead Pokemon
+        </div>
+
+        <!--todo==== slider btns ====-->
+        <div class="slide-btns">
+          <img
+            class="slide-btn left-btn p-absolute"
+            src="./assests/images/left-btn.png"
+            alt=""
+          />
+          <img
+            class="slide-btn right-btn p-absolute"
+            src="./assests/images/right-btn.png"
+            alt=""
+          />
         </div>
       </section>
       <!--!=================== more section starts ===================-->
-      <section class="section m-auto p-relative">
+      <section class="section m-auto p-relative more-main-container">
         <div class="more section">
           <div class="more-container">
             <div class="grid grid-three-cols">
@@ -777,6 +783,7 @@
             </div>
           </div>
         </div>
+        <div class="more-caption p-absolute">Explore more Pokemon</div>
       </section>
     </section>
 
@@ -804,32 +811,41 @@
               </form>
             </div>
             <!--todo=== item two ===-->
-            <ul>
-              <li>I'd like to reeive emails about:</li>
-              <li>
-                <input type="checkbox" />
-                <span>Pokemon video games, apps, and more</span>
-              </li>
-              <li>
-                <input type="checkbox" />
-                <span>Pokemon Center (our official online shop)</span>
-              </li>
-              <li>
-                <input type="checkbox" />
-                <span
-                  >I accept the Pokemon.com
-                  <span class="unerline">Termes of Use</span> and
-                  <span class="underline">Privacy Policy</span></span
+            <div class="footer-list">
+              <div>&nbsp;</div>
+              <div>&nbsp;</div>
+
+              <p>I'd like to reeive emails about:</p>
+              <div>
+                <input checked type="checkbox" id="more-apps" />
+                <label for="more-apps"
+                  >Pokemon video games, apps, and more</label
                 >
-              </li>
-            </ul>
+              </div>
+              <div>
+                <input checked type="checkbox" id="online-shop" />
+                <label for="online-shop"
+                  >Pokemon Center (our official online shop)</label
+                >
+              </div>
+              <div>
+                <input type="checkbox" id="terms" />
+                <label
+                  >I accept the Pokemon.com
+                  <span class="underline">Termes of Use</span> and
+                  <span class="underline">Privacy Policy</span></label
+                >
+              </div>
+            </div>
           </div>
           <!--todo===== footer second part =====-->
           <div class="grid grid-three-cols">
             <!--todo=== item one ===-->
             <div class="company">
-              <h2 class="txt-cap">The Pokemon Company</h2>
               <ul>
+                <li>
+                  <h2 class="txt-cap">The Pokemon Company</h2>
+                </li>
                 <li>News</li>
                 <li>Parents Guide</li>
                 <li>Customer Service</li>
@@ -892,5 +908,8 @@
         </div>
       </section>
     </footer>
+    <!--!=================== script section starts ===================-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./assests/app.js"></script>
   </body>
 </html>
