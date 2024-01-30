@@ -178,6 +178,28 @@
     align-items: center;
   }
 }
+@media (width <= 650px) {
+  .swiper-slide:hover .slide-img img {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+  }
+  .slide-btn {
+    top: 60%;
+  }
+  .left-btn {
+    left: 2rem;
+  }
+
+  .right-btn {
+    right: 2rem;
+  }
+  .slide-btns img {
+    width: 5rem;
+  }
+}
 @media (width <= 640px) {
   .slider-main-container .caption {
     left: 3rem;
