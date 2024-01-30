@@ -74,7 +74,7 @@
     left: -100%;
     opacity: 0;
     width: 100%;
-    height: calc(100vh - 12rem);
+    height: calc(100vh - 14rem);
     background-color: white;
     z-index: 1;
     flex-direction: column;
